@@ -1,0 +1,174 @@
+{"youtubeConfig":{"path":"c:\\path\\for\\downaloads\\"}
+,
+  "playerConfig":{"volume":10.0}
+,
+  "commandConfig":{"commands":[{"commandUID":"playMusic",
+    "commandExecuteString":"play",
+    "helpinfo":"Plays music from the currently selected station.",
+    "permissionLevelRequired":0,
+    "arguments":[],
+    "requiredExtras":["pandora"]}
+  ,
+    {"commandUID":"addNewStation",
+      "commandExecuteString":"add",
+      "helpinfo":"Adds a station from the list retrieved by the search command to the current station list. Ex: add 3",
+      "permissionLevelRequired":0,
+      "arguments":[{"argument":"addIndex",
+        "type":"int"}
+      ],
+      "requiredExtras":["pandora"]}
+  ,
+    {"commandUID":"setUserPermissions",
+      "commandExecuteString":"setperms",
+      "helpinfo":"Set a user's permissions level. Syntax: setperms \"userID\" 5",
+      "permissionLevelRequired":10,
+      "arguments":[{"argument":"userID",
+        "type":"string"}
+      ,
+        {"argument":"permissionsLevel",
+          "type":"int"}
+      ],
+      "requiredExtras":["commandHandler"]}
+  ,
+    {"commandUID":"getMusicList",
+      "commandExecuteString":"stations",
+      "helpinfo":"Retrieves a list of available radio stations.",
+      "permissionLevelRequired":0,
+      "arguments":[],
+      "requiredExtras":["pandora"]}
+  ,
+    {"commandUID":"joinChannelByUser",
+      "commandExecuteString":"joinme",
+      "helpinfo":"Joins the channel you are currently in.",
+      "permissionLevelRequired":0,
+      "arguments":[],
+      "requiredExtras":["pandora"]}
+  ,
+    {"commandUID":"pause",
+      "commandExecuteString":"pause",
+      "helpinfo":"Pauses music.",
+      "permissionLevelRequired":0,
+      "arguments":[],
+      "requiredExtras":["pandora"]}
+  ,
+    {"commandUID":"setVolume",
+      "commandExecuteString":"volume",
+      "helpinfo":"Sets the volume to #.  Must be a value between 1 and 20. Ex: volume 5",
+      "permissionLevelRequired":1,
+      "arguments":[{"argument":"newVolume",
+        "type":"int"}
+      ],
+      "requiredExtras":["pandora"]}
+  ,
+    {"commandUID":"getHelpMessage",
+      "commandExecuteString":"help",
+      "helpinfo":"Lists all commands available to your permissions level.",
+      "permissionLevelRequired":-1,
+      "arguments":[],
+      "requiredExtras":["commandHandler"]}
+  ,
+    {"commandUID":"searchForStation",
+      "commandExecuteString":"search",
+      "helpinfo":"Returns a list of stations matching \"searchstring\". Search strings must be enclosed in \"s. Ex: search \"Black Sabbath\"",
+      "permissionLevelRequired":0,
+      "arguments":[{"argument":"searchString",
+        "type":"string"}
+      ],
+      "requiredExtras":["pandora"]}
+  ,
+    {"commandUID":"pickStation",
+      "commandExecuteString":"pick",
+      "helpinfo":"Sets current station to station # on list retrieved with 'stations' command. Ex: pick 2",
+      "permissionLevelRequired":0,
+      "arguments":[{"argument":"stationIndex",
+        "type":"int"}
+      ],
+      "requiredExtras":["pandora"]}
+  ,
+    {"commandUID":"addUserByName",
+      "commandExecuteString":"adduser",
+      "helpinfo":"Add a user to the bot's authorized user list. Syntax: adduser \"username\" 5",
+      "permissionLevelRequired":99,
+      "arguments":[{"argument":"username",
+        "type":"string"}
+      ,
+        {"argument":"permissionsLevel",
+          "type":"int"}
+      ],
+      "requiredExtras":["commandHandler"]}
+  ,
+    {"commandUID":"addUserByID",
+      "commandExecuteString":"adduserid",
+      "helpinfo":"Add a user to the bot's authorized user list. Syntax: adduser \"userID\" 5",
+      "permissionLevelRequired":10,
+      "arguments":[{"argument":"userID",
+        "type":"string"}
+      ,
+        {"argument":"permissionsLevel",
+          "type":"int"}
+      ],
+      "requiredExtras":["commandHandler"]}
+  ,
+    {"commandUID":"debugMessageChannel",
+      "commandExecuteString":"dbmc",
+      "helpinfo":"unlisted",
+      "permissionLevelRequired":99,
+      "arguments":[{"argument":"channelName",
+        "type":"string"}
+      ,
+        {"argument":"message",
+          "type":"string"}
+      ],
+      "requiredExtras":[]}
+  ,
+    {"commandUID":"playYoutube",
+      "commandExecuteString":"yt",
+      "helpinfo":"Plays music from youtube. Syntax: yt https://www.youtube.com/watch?v=fGx6K90TmCI",
+      "permissionLevelRequired":0,
+      "arguments":[{"argument":"youtubeURL",
+        "type":"string"}
+      ],
+      "requiredExtras":["youtube",
+        "pandora"]}
+  ,
+    {"commandUID":"joinChannelByName",
+      "commandExecuteString":"join",
+      "helpinfo":"Joins channel \"name\". Channel names must be enclosed in \"s. Ex: join \"General Voice\"",
+      "permissionLevelRequired":0,
+      "arguments":[{"argument":"channelName",
+        "type":"string"}
+      ],
+      "requiredExtras":["pandora"]}
+  ,
+    {"commandUID":"unpause",
+      "commandExecuteString":"unpause",
+      "helpinfo":"Unpauses music.",
+      "permissionLevelRequired":0,
+      "arguments":[],
+      "requiredExtras":["pandora"]}
+  ,
+    {"commandUID":"selfAuth",
+      "commandExecuteString":"addme",
+      "helpinfo":"Automatically adds you to the bot's authorized users list with permissions to run basic commands.",
+      "permissionLevelRequired":-1,
+      "arguments":[],
+      "requiredExtras":["commandHandler"]}
+  ,
+    {"commandUID":"shutdownBot",
+      "commandExecuteString":"shutdown",
+      "helpinfo":"Shuts down the bot gracefully.",
+      "permissionLevelRequired":99,
+      "arguments":[],
+      "requiredExtras":["system"]}
+  ]}
+,
+  "userConfig":{"users":[
+    {"userID":"999999999999",
+    "permissionsLevel":0}]},
+  "credentialsConfig":{"credentials":[{
+    "service": "pandora",
+    "username": "person",
+    "password": "nunya"
+  }]
+  }
+}
